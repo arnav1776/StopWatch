@@ -11,7 +11,7 @@ var hr = 0;
 var min = 0;
 var isTimerOn = false;
 var timerVar = false;
-button.addEventListener("click", function (event) {
+button.addEventListener("click",  () => {
     if(isTimerOn)
   {
     clearInterval(timerVar);
@@ -21,7 +21,7 @@ button.addEventListener("click", function (event) {
   }
   else
   {
-        timerVar = setInterval(function () {
+        timerVar = setInterval( () => {
             sec = parseInt(sec);
             min = parseInt(min);
             hr = parseInt(hr);
@@ -58,7 +58,7 @@ button.addEventListener("click", function (event) {
     
 });
 
-lap.addEventListener("click", function () {
+lap.addEventListener("click", () => {
     var timeDiv = document.createElement("div");
     timeDiv.setAttribute("id","timeStamp")
     var hr = document.createElement("hr");
