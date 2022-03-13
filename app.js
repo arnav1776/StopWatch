@@ -5,7 +5,7 @@ var hour = document.querySelector(".hour");
 var lap = document.querySelector(".lap");
 var lapContainer = document.querySelector(".lap-container");
 
-var count = 1
+var count = 1;
 var sec = 0;
 var hr = 0;
 var min = 0;
@@ -25,17 +25,17 @@ button.addEventListener("click",  () => {
             sec = parseInt(sec);
             min = parseInt(min);
             hr = parseInt(hr);
+
+            
             sec = sec+1;
             if (sec == 60) {
                 min = min + 1;
                 sec = 0;
-                milisec = 0;
             }
             if (min == 60) {
                 hr = hr + 1;
                 min = 0;
                 sec = 0;
-                milisec = 0;
             }
            
             if (sec < 10 || sec == 0) {
@@ -54,6 +54,7 @@ button.addEventListener("click",  () => {
         isTimerOn = true;
         button.innerHTML = "stop"
         lap.innerHTML = "lap"
+        button.style.background = "red"
   }
     
 });
